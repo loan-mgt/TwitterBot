@@ -1,6 +1,7 @@
 import requests 
+import Key
 
-auth_key = "KEY"
+auth_key = Key.deepl_key
 
 target_language = 'FR'
 

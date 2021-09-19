@@ -5,17 +5,19 @@ from Tweet import tweet
 from Log import save_json, load_json
 from News_api import get_news
 from Translation import traduction
+from Hashtag import hashtag
 
 print('MAIN LOOP STARTEING')
 while True:
     print('MAIN LOOP ')
     data = load_json()
-    print(data)
+    
     for i in get_news():
         if i['id'] not in data['done']:
-            print('not done')
+            
             print(i['id'])
             _body = i['summary']
+            print("len befor traduction",len(_body))
             body = traduction(_body)
             if len(body) > 280:
                 _body = i['title']
@@ -27,6 +29,8 @@ while True:
                     break
 
 
+
+            body = hashtag(body)
             
             img = i['imageUrl']
             print(body,img)
@@ -39,7 +43,7 @@ while True:
     
 
     save_json(data)
-    time.sleep(120)
+    time.sleep(60*1 )
 
     
     pass

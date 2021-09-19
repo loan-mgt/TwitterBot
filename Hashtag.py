@@ -16,17 +16,39 @@ lib_has = {
 "crew":"#Crew",
 "Crew":"#Crew",
 "space":"#Space",
-"Space":"#Space"
+"Space":"#Space",
+"Starship":"#Starship",
+"Texas":"#Texas",
+"Starbase":"#Starbase",
+"BocaChica":"#BocaChica",
 
 
 
 }
 
+paritcular ={
+	'Falcon 9':'#Falcon9',
+	'Crew Dragon':'#CrewDragon',
+	'Inspiration 4':'#Inspiration4',
+	'Space X':'#SpaceX',
+	'Space Force':'#SpaceFroce'
+}
+
 
 
 def hashtag(text):
+	for i, v in paritcular.items():
+		
+		if i in text:
+			inn = text.index(i)
+			text = text[:inn] + paritcular[i] + text[inn + len(i):]
+	
+	
+
+
 	splt_text = text.split(" ")
 	htg_ed = []
+
 	for i in splt_text:
 		if i in lib_has:
 			htg_ed.append(lib_has[i])
@@ -34,6 +56,7 @@ def hashtag(text):
 			htg_ed.append(i)
 	regrouped = " ".join(htg_ed)
 	return regrouped
+
 
 
 

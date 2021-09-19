@@ -1,6 +1,6 @@
 import requests 
 
-auth_key = "af71aef7-f83a-8940-e7b6-a109096d252c:fx"
+auth_key = "KEY"
 
 target_language = 'FR'
 

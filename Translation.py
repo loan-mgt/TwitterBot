@@ -8,8 +8,7 @@ target_language = 'FR'
 
 def traduction(text):
 
-
-
+    
     result = requests.get( 
        "https://api-free.deepl.com/v2/translate", 
        params={ 
@@ -18,6 +17,7 @@ def traduction(text):
          "text": text, 
        }, 
     ) 
+    print("no traduction errror")
     return result.json()["translations"][0]["text"]
 
 

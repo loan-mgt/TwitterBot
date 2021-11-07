@@ -1,3 +1,4 @@
+
 print('INIT STARTED')
 
 import time
@@ -8,7 +9,7 @@ from Translation import traduction
 from Hashtag import hashtag
 
 print('MAIN LOOP STARTEING')
-while True:
+def main():
     print('MAIN LOOP ')
     data = load_json()
     
@@ -34,7 +35,10 @@ while True:
             
             img = i['imageUrl']
             print(body,img)
-            tweet(img,body)
+            try:
+            	tweet(img,body)
+            except Exception as e:
+            	print(e)
             data['done'] = data['done']+[i['id']]
             break
         
@@ -46,4 +50,11 @@ while True:
     time.sleep(60*60 )
 
     
-    pass
+    
+while True:
+	try:
+		main()
+	except Exception as e :
+		print('error',e)
+		time.sleep(60*60)
+

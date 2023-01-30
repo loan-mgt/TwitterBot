@@ -1,5 +1,0 @@
-tweet_key = "sHnyyJv7bBvy7qJbNrgsZFPIg"
-tweet_secrete = "nlDrNCW1SRcZp6tsYe33oDS7yLIbkXEIHGqYUn7tmA3Aj6ybN3"
-tweet_token ="1308495726238986240-gfCuFJIDj60FoUsZKcyk0YKS72fNjz"
-tweet_token_secrete = "DoP2nPOAJ43DELsBqKVtqnCYNsDS6ouFaYHAqO6InloQo"
-deepl_key = "9015a159-cfec-2def-7026-bdb221ebdbed:fx"

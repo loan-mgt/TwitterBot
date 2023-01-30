@@ -6,7 +6,7 @@ from Tweet import tweet
 from Log import save_json, load_json
 from News_api import get_news
 from Translation import traduction
-from Hashtag import hashtag
+from pyHashtag import hashtag
 
 print('MAIN LOOP STARTEING')
 def main():

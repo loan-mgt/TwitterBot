@@ -17,4 +17,4 @@ def tweet(img,msg):
 	with open('tmp.png', 'wb') as f:
 		f.write(r.content)
 	media_id = api.media_upload(filename='tmp.png')
-	#api.update_status(status=msg,media_ids=[media_id] )
+	api.update_status(status=msg,media_ids=[media_id.media_id_string] )
